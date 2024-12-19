@@ -61,7 +61,7 @@ function loadGameplay() {
     gameLog.innerHTML = `
         <div>Level ${level}</div>
         <div>${targetHint}</div>
-        <div>Type the correct angle to hit the target (within ±${tolerance} of the correct angle):</div>
+        <div>Type the correct angle to hit the target:</div>
     `;
 
     document.getElementById("story-container").style.display = "none";
@@ -85,7 +85,7 @@ function handleInput() {
             document.getElementById("fire-button").disabled = true;
         }
     } else {
-        logFeedback(`You missed the target. Try again. (Hint: Aim within ±${tolerance} of the correct angle)`, true);
+        logFeedback(`You missed the target. Try again.`, true);
     }
 }
 
