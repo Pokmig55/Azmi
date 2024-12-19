@@ -4,7 +4,7 @@ const levels = [
         level: 1,
         story: "Sherwood Forest: Robin Hood is practicing archery in the peaceful forest.",
         targetHint: "The target is close. A small or medium angle will hit the target.",
-        correctAngle: 30,
+        correctAngle: 30.1,
     },
     {
         level: 2,
