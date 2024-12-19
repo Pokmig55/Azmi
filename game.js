@@ -82,7 +82,7 @@ function handleInput() {
             logFeedback(`Prepare for Level ${levels[currentLevel].level}...`);
             displayStory();
         } else {
-            logFeedback("Congratulations! You have come to the end, Thank you for playing");
+            logFeedback("Congratulations! Thank you for playing");
             document.getElementById("fire-button").disabled = true;
         }
     } else {
