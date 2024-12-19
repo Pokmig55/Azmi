@@ -4,7 +4,7 @@ const levels = [
         level: 1,
         story: "Sherwood Forest: Robin Hood is practicing archery in the peaceful forest.",
         targetHint: "The target is close. A small or medium angle will hit the target.",
-        correctAngle: 30.1,
+        correctAngle: 30,
     },
     {
         level: 2,
@@ -39,7 +39,7 @@ const levels = [
 ];
 
 let currentLevel = 0;
-const tolerance = 2; // Allowable deviation from the correct angle
+
 
 // Display the story for the current level
 function displayStory() {
@@ -61,7 +61,7 @@ function loadGameplay() {
     gameLog.innerHTML = `
         <div>Level ${level}</div>
         <div>${targetHint}</div>
-        <div>Type the correct angle to hit the target (within ±${tolerance} of the correct angle):</div>
+        <div>Type the correct angle to hit the target:</div>
     `;
 
     document.getElementById("story-container").style.display = "none";
@@ -70,10 +70,10 @@ function loadGameplay() {
 
 // Process the player's input
 function handleInput() {
-    const angleInput = parseInt(document.getElementById("angle-input").value, 10);
+    const angleInput = document.getElementById("angle-input").value;
     const { correctAngle } = levels[currentLevel];
 
-    if (Math.abs(angleInput - correctAngle) <= tolerance) {
+    if (parseInt(angleInput, 10) === correctAngle) {
         logFeedback("You hit the target! Well done!");
 
         currentLevel++;
@@ -85,7 +85,7 @@ function handleInput() {
             document.getElementById("fire-button").disabled = true;
         }
     } else {
-        logFeedback(`You missed the target. Try again. (Hint: Aim within ±${tolerance} of the correct angle)`, true);
+        logFeedback("You missed the target. Try again.", true);
     }
 }
 
@@ -93,4 +93,17 @@ function handleInput() {
 function logFeedback(message, isHint = false) {
     const log = document.getElementById("game-log");
     const messageClass = isHint ? "hint" : "success";
-   
+    log.innerHTML += `<div class="${messageClass}">${message}</div>`;
+    log.scrollTop = log.scrollHeight;
+}
+
+// Initialize the game
+function initGame() {
+    currentLevel = 0;
+    displayStory();
+}
+
+// Event listeners
+document.getElementById("skip-button").addEventListener("click", loadGameplay);
+document.getElementById("fire-button").addEventListener("click", handleInput);
+window.onload = initGame;
