@@ -40,7 +40,6 @@ const levels = [
 ];
 
 let currentLevel = 0;
-const tolerance = 2; // Allowable deviation from the correct angle
 
 // Display the story for the current level
 function displayStory() {
