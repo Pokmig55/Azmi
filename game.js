@@ -74,7 +74,7 @@ function handleInput() {
     const { correctAngle } = levels[currentLevel];
 
     if (Math.abs(angleInput - correctAngle) <= tolerance) {
-        logFeedback("You hit the target! Well done!");
+        logFeedback("You won it! Well done!");
 
         currentLevel++;
         if (currentLevel < levels.length) {
