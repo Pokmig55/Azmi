@@ -61,7 +61,7 @@ function loadGameplay() {
     gameLog.innerHTML = `
         <div>Level ${level}</div>
         <div>${targetHint}</div>
-        <div>Type the correct angle to hit the target:</div>
+        <div>Type the correct answer to hit the target:</div>
     `;
 
     document.getElementById("story-container").style.display = "none";
