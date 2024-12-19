@@ -82,7 +82,7 @@ function handleInput() {
             logFeedback(`Prepare for Level ${levels[currentLevel].level}...`);
             displayStory();
         } else {
-            logFeedback("Congratulations! Thank you for playing");
+            logFeedback("Congratulations! You've completed all levels and become Nottingham's hero!");
             document.getElementById("fire-button").disabled = true;
         }
     } else {
