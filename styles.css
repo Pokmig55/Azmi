@@ -18,6 +18,17 @@ body {
     padding: 20px;
     background-color: black;
 }
+.story-ascii {
+    font-family: monospace;
+    white-space: pre-wrap;
+    line-height: 1.2;
+    color: lightblue;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
 
 .success {
     color: lightgreen;
