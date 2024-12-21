@@ -17,7 +17,9 @@ body {
     border: 2px solid white;
     padding: 20px;
     background-color: black;
+    box-shadow: 0 0 10px lightblue;
 }
+
 .story-ascii {
     font-family: monospace;
     white-space: pre-wrap;
@@ -28,6 +30,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-bottom: 15px;
+    padding: 10px 0;
 }
 
 .success {
@@ -47,6 +50,13 @@ body {
     color: black;
     border: none;
     cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#fire-button:hover, #skip-button:hover {
+    background-color: lightblue;
+    color: black;
 }
 
 input {
@@ -54,5 +64,6 @@ input {
     font-size: 16px;
     width: 60%;
     margin: 10px 0;
+    border: 1px solid lightblue;
+    border-radius: 4px;
 }
-
