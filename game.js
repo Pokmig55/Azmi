@@ -9,6 +9,7 @@ const levels = [
   |::::::__::::::|
   |:::::/||\\:::::|
   |:#:::||||::#::|
+        
         In the heart of Sherwood Forest, Robin Hood faces a challenge to rob a 
         Nobleman who was on his way to the vault to store a sack full of gold coins.
         `,
