@@ -3,21 +3,16 @@ const levels = [
     {
         level: 1,
         story: `
-   [][][] /""\\ [][][] 
+         [][][] /""\\ [][][] 
   |::| /____\\ |::|
   |[]|_|::::|_|[]|
   |::::::__::::::|
   |:::::/||\\:::::|
   |:#:::||||::#::|
-        
         In the heart of Sherwood Forest, Robin Hood faces a challenge to rob a 
         Nobleman who was on his way to the vault to store a sack full of gold coins.
         `,
-        targetHint: `
-        The noble carriage was already on a hill that had a height 3.05 meters high and 10 meters away, awaited his arrow. Standing at 2.00 meters tall,
-        Robin needed to shoot The horse-drawn carriage to cut the rope that tied the sack containing the gold coins.
-        What is the initial speed for Robin to fire in m/s ?
-        `,
+        targetHint: "The target is close. A small or medium angle will hit the target.",
         correctAngle: 30,
     },
     {
@@ -100,7 +95,7 @@ function loadGameplay() {
     gameLog.innerHTML = `
         <div>Level ${level}</div>
         <div>${targetHint}</div>
-        <div>Type the correct answer to hit the target:</div>
+        <div>Type the correct angle to hit the target:</div>
     `;
 
     document.getElementById("story-container").style.display = "none";
@@ -124,7 +119,7 @@ function handleInput() {
             document.getElementById("fire-button").disabled = true;
         }
     } else {
-        logFeedback(`You missed the target. Try again.`, true);
+        logFeedback("You missed the target. Try again.", true);
     }
 }
 
