@@ -3,17 +3,15 @@ const tolerance = 1
 const levels = [
     {
         level: 1,
-        ascii:`
-       
+        story: `
          [][][] /""\ [][][]
   |::| /____\ |::|
   |[]|_|::::|_|[]|
   |::::::__::::::|
   |:::::/||\:::::|
   |:#:::||||::#::|
-  `,
-
-        story: "In the heart of Sherwood Forest, Robin Hood faced a challenge to rob a  Nobleman who was on his way to the vault to store a sack full of gold coins.",
+        In the heart of Sherwood Forest, Robin Hood faced a challenge to rob a 
+        Nobleman who was on his way to the vault to store a sack full of gold coins.`,
         targetHint: "The target is close. A small or medium angle will hit the target.",
         correctAngle: 30,
     },
