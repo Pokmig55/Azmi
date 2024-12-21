@@ -26,11 +26,7 @@ body {
     line-height: 1.2;
     color: lightblue;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-bottom: 15px;
-    padding: 10px 0;
 }
 
 .success {
@@ -44,7 +40,7 @@ body {
 
 #fire-button, #skip-button {
     margin-top: 15px;
-    padding: 10px;
+    padding: 10px 20px;
     font-size: 16px;
     background-color: white;
     color: black;
