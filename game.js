@@ -16,7 +16,7 @@ const levels = [
         targetHint: `
         The noble carriage was already on a hill that had a height 3.05 meters high and 10 meters away, awaited his arrow. Standing at 2.00 meters tall,
         Robin needed to shoot The horse-drawn carriage to cut the rope that tied the sack containing the gold coins.
-        What is the initial speed for Robin to fire?
+        What is the initial speed for Robin to fire in m/s ?
         `,
         correctAngle: 30,
     },
