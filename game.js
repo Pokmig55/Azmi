@@ -1,48 +1,74 @@
-// Level configurations
-const tolerance = 1
+const tolerance = 1; // Allowed deviation for correct answers
 const levels = [
     {
         level: 1,
         story: `
-         [][][] /""\ [][][]
-  |::| /____\ |::|
+         [][][] /""\\ [][][] 
+  |::| /____\\ |::|
   |[]|_|::::|_|[]|
   |::::::__::::::|
-  |:::::/||\:::::|
+  |:::::/||\\:::::|
   |:#:::||||::#::|
-        In the heart of Sherwood Forest, Robin Hood faced a challenge to rob a 
-        Nobleman who was on his way to the vault to store a sack full of gold coins.`,
+        In the heart of Sherwood Forest, Robin Hood faces a challenge to rob a 
+        Nobleman who was on his way to the vault to store a sack full of gold coins.
+        `,
         targetHint: "The target is close. A small or medium angle will hit the target.",
         correctAngle: 30,
     },
     {
         level: 2,
-        story: "Village Square: A crowd gathers to watch Robin's archery skills.",
+        story: `
+           ____
+        __/    \\__
+       |          |
+       |  VILLAGE |
+        \\________/
+        In the Village Square, a crowd gathers to watch Robin's archery skills.
+        `,
         targetHint: "The target is further away. Try a balanced angle.",
         correctAngle: 35,
     },
     {
         level: 3,
-        story: "The Castle Gates: Robin is aiming for a distant target near the castle.",
+        story: `
+         _______
+        |       |
+        | CASTLE|
+        |_______|
+        Robin is aiming for a distant target near the castle gates.
+        `,
         targetHint: "A high angle will help reach the far-off target.",
         correctAngle: 60,
     },
     {
         level: 4,
-        story: "The Hidden Tower: The Sheriff is watching. Robin must be precise.",
+        story: `
+         |____|
+        [______]
+        [______]  THE TOWER
+        The Sheriff is watching. Robin must be precise.
+        `,
         targetHint: "Precision is key. A mid-range angle will work best.",
         correctAngle: 50,
     },
     {
         level: 5,
-        story: "The King's Hall: Robin must shoot through the narrow hall to hit the target.",
+        story: `
+          ||||||||
+          ||KING'S|
+          || HALL |
+        Robin must shoot through the narrow hall to hit the target.
+        `,
         targetHint: "The path is narrow. Be precise with your angle.",
         correctAngle: 45,
     },
     {
         level: 6,
-        story: "The Final Trial: Robin's greatest challenge awaits.",
-        targetHint: "This is it. Only the perfect angle will succeed.",
+        story: `
+        FINAL TRIAL: 
+        Robin's greatest challenge awaits.
+        `,
+        targetHint: "Only the perfect angle will succeed.",
         correctAngle: 40,
     },
 ];
@@ -55,7 +81,7 @@ function displayStory() {
     const storyLog = document.getElementById("story-log");
     storyLog.innerHTML = `
         <div>Level ${level}</div>
-        <div>${story}</div>
+        <pre class="story-ascii">${story}</pre>
     `;
     document.getElementById("story-container").style.display = "block";
     document.getElementById("gameplay-container").style.display = "none";
